@@ -1,0 +1,79 @@
+.container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+/*left zone*/
+.container .form-zone {
+	display: block;
+	width: 50%;
+	height: 100%;
+	background: #000;
+}
+
+.container .form-zone .title {
+	color: #fff;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	margin-bottom: 10%;
+}
+
+.container .form-zone form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	gap: 1rem;
+}
+
+.container .form-zone form input {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	padding: 1rem;
+	color: #fff;
+}
+
+#login-btn {
+	margin-top: 3rem;
+	padding: 1rem;
+	background: transparent;
+	text-transform: uppercase;
+	border: none;
+	border: 1px solid #fff;
+	outline: none;
+	color: #fff;
+	box-shadow: none;
+	transition: transform 200ms ease;
+}
+
+#login-btn:hover {
+	transform: scale(1.05);
+}
+
+.container .form-zone form input, #login-btn {
+	width: 100%;
+	max-width: 270px;
+}
+
+/*rigth zone*/
+.container .blank-zone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	background: #fff;
+}
+
+.container .blank-zone .circle {
+	border-radius: 50%;
+	background: #000;
+	width: 200px;
+	height: 200px;
+}
+
