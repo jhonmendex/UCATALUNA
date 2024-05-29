@@ -1,0 +1,19 @@
+button.btn.btn-warning.mt-2{
+    width: 100%;
+    background-color: #F26422;
+    color: white;
+}
+
+.bi-person-heart::before {
+    font-size: 60px;
+}
+
+div.text-center{
+    margin-bottom: 20px;
+}
+
+div.col.md-6{
+    padding: 20px;
+    border: 1px black solid;
+    margin-top: 100px;
+}
