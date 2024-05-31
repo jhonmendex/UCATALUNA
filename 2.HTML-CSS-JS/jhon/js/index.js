@@ -3,8 +3,12 @@
 //condicionales - operadores
 //ciclos
 //funciones
-//colecciones: listas,arrays,diccionarios,colas,pilas
+//colecciones: listas,arrays,diccionarios
 //objetos -- typescript
+//Manipulacion DOM
+//peticiones a servidores (api fetch)
+//  --callcack, --promesas --async await
+/*
 var usuario = "jhon";
 let correo = "jhon@gmail.com";
 let contrasena = "123";
@@ -47,3 +51,39 @@ empleado.apellido = "ramirez";
 console.log(
   `me llamo ${empleado.nombre} y mi apellido es ${empleado.apellido}`
 );
+*/
+//manipulacion DOM
+
+//OBTENER ELEMENTOS DEL DOM
+let tituloElemento = document.getElementById("titulo");
+console.log(tituloElemento);
+
+let tituloElemento2 = document.getElementsByTagName("h1");
+console.log(tituloElemento2[0]);
+
+let parrafos = document.getElementsByClassName("mi-parrafo");
+console.log(parrafos);
+
+let parrafos2 = document.getElementsByName("mi-parrafo2");
+console.log(parrafos2[0]);
+
+let tituloElemento3 = document.querySelector(".mi-parrafo");
+console.log(tituloElemento3);
+
+let correo = document.querySelector("#email");
+//MODIFICAR ELEMENTOS DOM
+tituloElemento.innerHTML = "<strong>saludo jhon</strong>";
+parrafos2[0].textContent = "SALUDO CURSO FULLSTACK";
+
+for (let parrafo of parrafos) {
+  parrafo.addEventListener("click", () => {
+    parrafo.style.color = "red";
+    parrafo.innerHTML = "<h3>clic</h3>";
+    console.log(parrafo.textContent);
+    alert(correo.value);
+  });
+}
+
+function mostrarAlerta() {
+  alert("hola todos");
+}

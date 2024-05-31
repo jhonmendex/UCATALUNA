@@ -10,17 +10,24 @@
   <body>
     <div class="container">
       <div class="form-zone">
-				<form>
+				<form id="form">
 					<h1 class="title">LOGIN</h1>
           <input
+						id="email"
             type="email"
             placeholder="Email"
           />
-          <input 
+          <input
+						id="password" 
 						type="password" 
 						placeholder="Password" 
 					/>
-          <button id="login-btn">SIGN IN</button>
+          <button 
+						id="login-btn"
+						type="submit"
+					>
+						SIGN IN
+					</button>
         </form>
       </div>
 			<div class="blank-zone">
@@ -28,5 +35,6 @@
 			</div>
     </div>
     </div>
+		<script src="./js/login.js"></script>
   </body>
 </html>
