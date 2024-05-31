@@ -1,10 +1,10 @@
-function proceder() {
-    //1.crear un objeto usuario con correo y contrase;
-    let usuario = {
-        correo: "victor@gmail.com",
-        pass: "123",
-    };
+//1.crear un objeto usuario con correo y contrase;
+const usuario = {
+    correo: "victor@gmail.com",
+    pass: "123",
+};
 
+function proceder() {
     //2.capturar los datos de usuario y contrase;a DOM
     let emailElemento = document.getElementById("email");
     let passwordElemento = document.getElementById("password");
