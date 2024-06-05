@@ -14,7 +14,7 @@ function validarUsuario() {
   usuarioFront.setContrasena(document.getElementById("password").value);
   if (
     usuarioFront.correo == usuarioBack.correo &&
-    usuarioFront.contrasena == usuarioBack.contrasena
+    usuarioFront.getContrasena == usuarioBack.getContrasena
   ) {
     mostrarAlerta("inicio exitoso", "success");
   } else {
