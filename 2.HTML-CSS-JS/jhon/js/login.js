@@ -12,6 +12,8 @@ sesion_btn.addEventListener("click", validarUsuario);
 function validarUsuario() {
   usuarioFront.setCorreo(document.getElementById("email").value);
   usuarioFront.setContrasena(document.getElementById("password").value);
+
+  validarCredenciales();
   if (
     usuarioFront.correo == usuarioBack.correo &&
     usuarioFront.contrasena == usuarioBack.contrasena
@@ -33,4 +35,15 @@ function mostrarAlerta(mensaje, tipo) {
   setTimeout(() => {
     alerta.style.display = "none";
   }, 5000);
+}
+
+async function validarCredenciales() {
+  const solicitud = await fetch(
+    "https://665a6f2a003609eda45de62c.mockapi.io/usuarios"
+  );
+  const datos = await solicitud.json();
+  const user = datos.find(
+    (usuario) => usuario.correo === usuarioFront.getCorreo()
+  );
+  console.log(user);
 }
