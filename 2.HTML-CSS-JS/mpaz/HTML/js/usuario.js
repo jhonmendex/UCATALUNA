@@ -1,4 +1,4 @@
-//Crear clase usuario 
+//Crear clase Usuario 
 class Usuario {
     #correo;
     #contrasena;

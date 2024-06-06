@@ -1,6 +1,6 @@
 import Usuario from "./usuario.js";
 
-const usuarioBack = new Usuario("mpaz@gmail.com", "123");
+const usuarioBack = new Usuario("m.pazn@gmail.com", "123");
 
 //2.capturar los datos de usuario y contrase;a DOM
 const usuarioFront = new Usuario();
@@ -12,9 +12,11 @@ sesion_btn.addEventListener("click", validarUsuario);
 function validarUsuario() {
   usuarioFront.setCorreo(document.getElementById("email").value);
   usuarioFront.setContrasena(document.getElementById("password").value);
+
+  validarCredenciales();
   if (
     usuarioFront.correo == usuarioBack.correo &&
-    usuarioFront.getContrasena == usuarioBack.getContrasena
+    usuarioFront.contrasena == usuarioBack.contrasena
   ) {
     mostrarAlerta("inicio exitoso", "success");
   } else {
