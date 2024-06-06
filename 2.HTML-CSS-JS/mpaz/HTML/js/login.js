@@ -1,6 +1,6 @@
 import Usuario from "./usuario.js";
 
-const usuarioBack = new Usuario("jhon@gmail.com", "123");
+const usuarioBack = new Usuario("mpaz@gmail.com", "123");
 
 //2.capturar los datos de usuario y contrase;a DOM
 const usuarioFront = new Usuario();
