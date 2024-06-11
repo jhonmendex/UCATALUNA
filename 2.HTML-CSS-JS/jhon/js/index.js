@@ -83,7 +83,3 @@ for (let parrafo of parrafos) {
     alert(correo.value);
   });
 }
-
-function mostrarAlerta() {
-  alert("hola todos");
-}
