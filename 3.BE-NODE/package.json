@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ejemplos de node",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonmendex/UCATALUNA.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "jhon mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhonmendex/UCATALUNA/issues"
+  },
+  "homepage": "https://github.com/jhonmendex/UCATALUNA#readme",
+  "dependencies": {
+    "mongodb": "6.7.0"
+  },
+  "devDependencies": {
+    "standard": "17.1.0"
+  }
+}
