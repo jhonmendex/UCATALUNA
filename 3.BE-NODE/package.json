@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/jhonmendex/UCATALUNA#readme",
   "dependencies": {
-    "mongodb": "6.7.0"
+    "mongodb": "^6.8.0"
   },
   "devDependencies": {
     "standard": "17.1.0"
