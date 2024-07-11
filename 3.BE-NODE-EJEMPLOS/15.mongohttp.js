@@ -28,10 +28,11 @@ function creacionServidor(db) {
     console.log(request.method);
     console.log(request.url);
     console.log(request.headers);
-    if (urlParse.pathname === "/") {
+    console.log(urlParse);
+    if (urlParse.pathname === "/" && request.method === "GET") {
       response.setHeader("Content-Type", "application/json");
       response.end(JSON.stringify({ mensaje: "conexion" }));
-    } else if (urlParse.pathname === "/autores") {
+    } else if (urlParse.pathname === "/autores" && request.method === "GET") {
       consultarAutores(db)
         .then((autores) => {
           console.log(autores);
@@ -41,7 +42,7 @@ function creacionServidor(db) {
         .catch((error) => {
           console.log(error);
         });
-    } else if (urlParse.pathname === "/libros") {
+    } else if (urlParse.pathname === "/libros" && request.method === "GET") {
       consultarLibros(db)
         .then((libros) => {
           console.log(libros);
@@ -51,8 +52,30 @@ function creacionServidor(db) {
         .catch((error) => {
           console.log(error);
         });
+    } else if (urlParse.pathname === "/libros" && request.method === "POST") {
+      let body = "";
+      request.on("data", (datos) => {
+        body += datos.toString();
+      });
+
+      request.on("end", () => {
+        const libro = JSON.parse(body);
+        crearLibro(db, libro)
+          .then((libro) => {
+            response.setHeader("Content-Type", "application/json");
+            response.end(JSON.stringify(libro));
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
     }
   });
+}
+
+function crearLibro(db, libro) {
+  const collection = db.collection("libro");
+  return collection.insertOne(libro);
 }
 
 async function consultarAutores(db) {
