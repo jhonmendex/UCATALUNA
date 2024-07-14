@@ -1,29 +1,38 @@
 //encargado de gestionar/enlazar los datos
-import DataAccess from "../db.js";
-const dataAccess = new DataAccess();
 
-(async () => {
-  await dataAccess.connect();
-})();
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 const getAuthor = async () => {
-  const data = await dataAccess.findAll("autor");
+  const data = await prisma.autor.findMany();
   return data;
 };
 const getAuthorByID = async (id) => {
-  const data = await dataAccess.findById("autor", id);
+  const data = await prisma.autor.findUnique({ where: { id: parseInt(id) } });
   return data;
 };
 const createAuthor = async (document) => {
-  const data = await dataAccess.save("autor", document);
+  const data = await prisma.autor.create({
+    data: {
+      nombre: document.nombre,
+    },
+  });
   return data;
 };
 const updateAuthorByID = async (document, id) => {
-  const data = await dataAccess.updateById("autor", document, id);
+  const data = await prisma.autor.update({
+    where: { id: parseInt(id) },
+    data: {
+      nombre: document.nombre,
+    },
+  });
   return data;
 };
 const deleteAuthorByID = async (id) => {
-  const data = await dataAccess.deleteById("autor", id);
+  const data = await prisma.autor.delete({
+    where: { id: parseInt(id) },
+  });
   return data;
 };
 
