@@ -1,19 +1,12 @@
 import { Router } from "express";
-
+import userController from "../../controllers/userController.js";
 const router = new Router();
 
 router
-  .get("/", (req, res) => {
-    res.json({ message: "get user" });
-  })
-  .post("/", (req, res) => {
-    res.json({ message: "post user" });
-  })
-  .put("/", (req, res) => {
-    res.json({ message: "put user" });
-  })
-  .delete("/", (req, res) => {
-    res.json({ message: "delete user" });
-  });
+  .get("/", userController.getUser)
+  .get("/:id", userController.getUserByID)
+  .post("/", userController.createUser)
+  .put("/:id", userController.updateUserByID)
+  .delete("/:id", userController.deleteUserByID);
 
 export default router;
