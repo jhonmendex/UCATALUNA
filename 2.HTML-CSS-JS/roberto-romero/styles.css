@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container, .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.login-container {
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 5%;
+    padding-right: 10%;
+    width: 50%;
+}
+
+.login-form {    
+    font-family: "Poppins";
+    font-weight: 300;
+    font-style: thin;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h6 {     
+    font-family: "Poppins";
+    font-weight: 300;
+    font-style: thin; 
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: x-small;   
+    color: white;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #43B27F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #285956;
+}
+
+
+.centered-div {
+    padding: 50px;
+    width: 50%;
+    height: 75%;    
+    background-color: #285956;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.centered-div-two {
+    width: 100%;
+    height: 100%;    
+    background: radial-gradient(#285956 3%, black);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.right-container{
+    background-color: transparentt;
+    width: 50%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 25px;    
+}
+.info {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    background-color: #43B27F;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;    
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.efecto{   
+    background-color: #040909;     
+    margin-left: 80%;   
+    width: 20%;
+    height: 10%;
+    position: static;
+    border-bottom-left-radius: 25px;
+}
+.infoTitle
+{    
+    padding-left: 5%;
+    padding-right: 10%;
+    color:white;
+    font-size: 30px;
+    text-align: left;
+}
+.quote
+{    
+    padding-left: 5%;
+    padding-right: 10%;
+    color:white;
+    font-size: 12px;
+    text-align: left;
+}
+.autor
+{   
+    padding-top: 5%; 
+    padding-left: 5%;
+    padding-right: 10%;
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+.role
+{   
+    padding-top: 2%; 
+    padding-left: 5%;
+    padding-right: 10%;    
+    color:white;
+    font-size: 12px;    
+    text-align: left;
+}
+
+.button-container {
+    padding-top: 10%;
+    padding-left: 5%;
+    display: flex;
+    gap: 10px;
+}
+.btnLeft {
+    background-color: #DDFFF0;
+    color: #4AB884;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btnRight {
+    background-color: #11291C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+.bottonDiv {
+    text-align: left;
+    background-color: white;
+    padding: 10%;
+    margin-left: 5%;
+    margin-right: 5%;    
+    margin-top: 5%;
+    height: 50px;
+    width: 70%;    
+    border-radius: 15px;
+}
