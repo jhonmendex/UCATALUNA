@@ -27,10 +27,17 @@ const deleteUserByID = async (req, res) => {
   res.json(data);
 };
 
+const login = async (req, res) => {
+  const document = req.body;
+  const data = await userService.login(document);
+  res.json(data);
+};
+
 export default {
   getUser,
   getUserByID,
   createUser,
   deleteUserByID,
   updateUserByID,
+  login,
 };

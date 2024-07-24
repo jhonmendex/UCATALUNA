@@ -4,6 +4,7 @@ const router = new Router();
 
 router
   .get("/", userController.getUser)
+  .get("/login", userController.login)
   .get("/:id", userController.getUserByID)
   .post("/", userController.createUser)
   .put("/:id", userController.updateUserByID)

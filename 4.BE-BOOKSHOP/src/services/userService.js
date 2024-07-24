@@ -27,10 +27,16 @@ const deleteUserByID = async (id) => {
   return data;
 };
 
+const login = async (document) => {
+  const data = await dataAccess.findAll("usuario");
+  return data;
+};
+
 export default {
   getUser,
   getUserByID,
   createUser,
   deleteUserByID,
   updateUserByID,
+  login,
 };
