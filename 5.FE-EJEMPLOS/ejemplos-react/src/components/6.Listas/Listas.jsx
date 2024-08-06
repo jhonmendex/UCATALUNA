@@ -1,3 +1,5 @@
+import SesionBtn from "../11.Context/sesionBtn.jsx";
+
 export default function Lista({ datos }) {
   return (
     <>
@@ -7,6 +9,7 @@ export default function Lista({ datos }) {
           <li key={index}>{dato}</li>
         ))}
       </ul>
+      <SesionBtn />
     </>
   );
 }

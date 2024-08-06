@@ -8,19 +8,19 @@ class ContadorClase extends Component {
       nombre: "Juan",
       user: { nombre: "Juan", apellido: "Perez" },
     };
-    console.log("componente creado");
+    console.log("componente clase creado");
   }
 
   componentDidMount() {
-    console.log("componente montado");
+    console.log("componente clase montado");
   }
-  /*
+
   componentWillUnmount() {
-    console.log("componente desmontado");
-  } */
+    console.log("componente clase desmontado");
+  }
 
   componentDidUpdate() {
-    console.log("componente actualizado", this.state.contador);
+    console.log("componente clase actualizado", this.state.contador);
   }
 
   incrementar = () => {
@@ -32,7 +32,7 @@ class ContadorClase extends Component {
   };
 
   render() {
-    console.log("render");
+    console.log("componente de clase renderizado");
     return (
       <div>
         <h1>Contador: {this.state.contador}</h1>

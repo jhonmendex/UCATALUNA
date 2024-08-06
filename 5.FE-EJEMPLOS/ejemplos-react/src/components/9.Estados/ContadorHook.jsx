@@ -23,13 +23,14 @@ function ContadorHook() {
   };
 
   function actualializacion() {
-    console.log("actualizacion del cpm");
+    console.log("actualizacion del cpm hook");
   }
   //componentdidUpdate con hook
   useEffect(actualializacion, [contador, sesion]);
+
   //componentwilmount
   useEffect(() => {
-    console.log("componente montado");
+    console.log("componente hook montado");
   }, []);
 
   return (
